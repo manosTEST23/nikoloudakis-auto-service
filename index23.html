@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NIKOLOUDAKIS Auto Service - Χανιά</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin:0;
+      padding:0;
+      background:#111;
+      color:#eee;
+    }
+    header {
+      position:relative;
+      background:url('https://source.unsplash.com/1600x600/?car,service') center/cover no-repeat;
+      color:#fff;
+      text-align:center;
+      padding:120px 20px 80px 20px;
+      box-shadow:0 0 20px #ff0000;
+    }
+    header::after {
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.6);
+      z-index:0;
+    }
+    header h1,
+    header p,
+    header .subtext {
+      position:relative;
+      z-index:1;
+    }
+    nav {
+      background:#222;
+      padding:15px;
+      text-align:center;
+      position: sticky;
+      top:0;
+      z-index:1000;
+    }
+    nav a {
+      color:#fff;
+      margin:0 15px;
+      text-decoration:none;
+      font-weight:bold;
+      text-transform: uppercase;
+      letter-spacing:1px;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color:#ff4d4d;
+    }
+    .container {
+      max-width:1100px;
+      margin:30px auto;
+      padding:0 20px;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from {opacity:0;}
+      to {opacity:1;}
+    }
+    .service {
+      background:#1a1a1a;
+      padding:20px;
+      margin-bottom:25px;
+      border-left:5px solid #b30000;
+      border-radius:6px;
+      box-shadow:0 0 10px #ff1a1a33;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display:flex;
+      align-items:center;
+      gap:20px;
+    }
+    .service img {
+      width:150px;
+      border-radius:5px;
+    }
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow:0 0 15px #ff1a1a88;
+    }
+    footer {
+      background:#b30000;
+      color:#fff;
+      text-align:center;
+      padding:15px;
+      margin-top:30px;
+    }
+    button {
+      background:#e60000;
+      color:#fff;
+      border:none;
+      padding:12px 25px;
+      cursor:pointer;
+      border-radius:5px;
+      font-size:16px;
+      transition: background 0.3s, transform 0.3s;
+      margin-top:10px;
+    }
+    button:hover {
+      background:#ff1a1a;
+      transform: scale(1.05);
+    }
+    h1, h2, h3 {
+      color:#ff4d4d;
+    }
+    a.phone {
+      color:#ff4d4d;
+      text-decoration:none;
+    }
+    .about-image {
+      width:100%;
+      max-height:300px;
+      object-fit:cover;
+      border-radius:6px;
+      margin:20px 0;
+      box-shadow:0 0 10px #000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NIKOLOUDAKIS Auto Service</h1>
+    <p class="subtext">Εμπιστευθείτε τους ειδικούς στα Χανιά</p>
+    <p class="subtext">Ποιότητα, εμπειρία και επαγγελματισμός στη φροντίδα του αυτοκινήτου σας</p>
+  </header>
+  <nav>
+    <a href="#services">Υπηρεσίες</a>
+    <a href="#about">Σχετικά</a>
+    <a href="#contact">Επικοινωνία</a>
+  </nav>
+  <div class="container">
+    <section id="services">
+      <h2>Οι Υπηρεσίες μας</h2>
+      <div class="service">
+        <img src="https://source.unsplash.com/300x200/?oil-change" alt="Αλλαγή λαδιών">
+        <div>
+          <h3>Αλλαγή Λαδιών</h3>
+          <p>Αλλαγή λαδιών υψηλής απόδοσης για άριστη λειτουργία του κινητήρα σας.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="https://source.unsplash.com/300x200/?brake-repair" alt="Φρένα">
+        <div>
+          <h3>Επισκευή Φρένων</h3>
+          <p>Λεπτομερής έλεγχος και επισκευή φρένων για την ασφάλειά σας.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="https://source.unsplash.com/300x200/?car-diagnostics" alt="Διάγνωση">
+        <div>
+          <h3>Διάγνωση Κινητήρα</h3>
+          <p>Σύγχρονα διαγνωστικά εργαλεία για άμεση ανίχνευση και λύση προβλημάτων.</p>
+        </div>
+      </div>
+      <button onclick="alert('Η online κράτηση έρχεται σύντομα! Καλέστε στο 6988410291 για ραντεβού.')">Κλείστε Ραντεβού</button>
+    </section>
+
+    <section id="about">
+      <h2>Σχετικά με εμάς</h2>
+      <img class="about-image" src="https://source.unsplash.com/1000x300/?auto-service,mechanic" alt="Σχετικά με εμάς">
+      <p>Η NIKOLOUDAKIS Auto Service διαθέτει πάνω από 15 χρόνια εμπειρίας στον χώρο της επισκευής αυτοκινήτων στα Χανιά. Συνδυάζουμε τεχνογνωσία, καινοτομία και πάθος για το αυτοκίνητο με στόχο την κορυφαία εξυπηρέτηση.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Επικοινωνία</h2>
+      <p><strong>Διεύθυνση:</strong> Οδός Κεντρική 123, Χανιά</p>
+      <p><strong>Τηλέφωνο:</strong> <a href="tel:6988410291" class="phone">6988410291</a></p>
+      <p><strong>Email:</strong> info@nikoloudakisautoservice.gr</p>
+    </section>
+  </div>
+  <footer>
+    &copy; 2025 NIKOLOUDAKIS Auto Service. Όλα τα δικαιώματα διατηρούνται.
+  </footer>
+</body>
+</html>
